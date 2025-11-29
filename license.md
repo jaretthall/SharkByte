@@ -1,4 +1,5 @@
-Copyright 2014-2018 Stewart Allen <sa@grid.space>
+Original Kiri:Moto - Copyright 2014-2024 Stewart Allen <sa@grid.space>
+SharkByte Fork - Copyright 2024 Jarett Hall
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),

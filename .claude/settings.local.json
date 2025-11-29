@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(node:*)",
+      "Bash(curl:*)",
+      "Bash(npm install:*)",
+      "Bash(pkill:*)",
+      "Bash(fuser:*)",
+      "Bash(git checkout:*)",
+      "WebFetch(domain:docs.grid.space)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)",
+      "Bash(npx gs-app-server:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

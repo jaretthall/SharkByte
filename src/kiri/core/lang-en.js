@@ -1,1 +1,95 @@
-../../../web/kiri/lang/en.js
+// English language map for SharkByte
+// Based on Kiri:Moto language definitions
+export const lang = {
+    'en': {
+        // common keys and menus
+        animate:        "animate",
+        arrange:        "arrange",
+        axis:           "axis",
+        back:           "back",
+        clear:          "clear",
+        copy:           "copy",
+        clone:          "clone",
+        delete:         "delete",
+        detail:         "detail",
+        done:           "done",
+        edit:           "edit",
+        enable:         "enable",
+        disable:        "disable",
+        donate:         "donate",
+        export:         "export",
+        files:          "files",
+        filter:         "filter",
+        front:          "front",
+        fullscreen:     "fullscreen",
+        help:           "help",
+        ghost:          "ghost",
+        hide:           "hide",
+        home:           "home",
+        import:         "import",
+        language:       "language",
+        left:           "left",
+        machines:       "machines",
+        mesh:           "mesh",
+        metric:         "metric",
+        name:           "name",
+        new:            "new",
+        off:            "off",
+        on:             "on",
+        profs:          "profiles",
+        prefs:          "preferences",
+        preview:        "preview",
+        recent:         "recent",
+        rename:         "rename",
+        render:         "render",
+        reset:          "reset",
+        right:          "right",
+        rotate:         "rotate",
+        save:           "save",
+        scale:          "scale",
+        select:         "select",
+        setup:          "setup",
+        settings:       "settings",
+        size:           "size",
+        slice:          "slice",
+        solid:          "solid",
+        start:          "start",
+        tool:           "tool",
+        tools:          "tools",
+        top:            "top",
+        type:           "type",
+        version:        "version",
+        view:           "view",
+        wire:           "wire",
+        volume:         "volume",
+
+        // MODE
+        mo_menu:        "mode",
+        mo_fdmp:        "FDM Print",
+        mo_slap:        "SLA Print",
+        mo_lazr:        "Laser Cut",
+        mo_cncm:        "CNC Mill",
+
+        // SETUP
+        su_menu:        "setup",
+        su_devi:        "Devices",
+        su_tool:        "Tools",
+        su_locl:        "Local",
+        su_xprt:        "Export",
+        su_help:        "Help",
+
+        // LOAD
+        fe_menu:        "file",
+        fn_recn:        "Recent",
+        fn_impo:        "Import",
+
+        // FUNCTION
+        fn_menu:        "action",
+        fn_arra:        "Arrange",
+        fn_slic:        "Slice",
+        fn_prev:        "Preview",
+        fn_expo:        "Export"
+    }
+};
+
+export default lang;

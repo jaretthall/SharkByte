@@ -1,122 +1,93 @@
-# Grid.Space Applications
+# SharkByte 🦈
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/w/GridSpace/grid-apps)
-![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/GridSpace/grid-apps/rel-3.9)
-![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/GridSpace/grid-apps/rel-4.0)
-![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/GridSpace/grid-apps/rel-4.1)
+![SharkByte Logo](docs/sharkbyte_logo.png)
 
-![GitHub contributors](https://img.shields.io/github/contributors/GridSpace/grid-apps)
-![GitHub last commit](https://img.shields.io/github/last-commit/GridSpace/grid-apps)
-![GitHub](https://img.shields.io/github/license/GridSpace/grid-apps)
+## Open-source CAM for CNC Shark routers
 
+SharkByte is a specialized CAM (Computer-Aided Manufacturing) tool optimized for CNC Shark HD4 routers. It's a fork of the excellent Kiri:Moto project by Stewart Allen, tailored specifically for the needs of CNC Shark users who need a powerful, free alternative to VCarve Pro.
 
-# Community
+### Why SharkByte?
 
-[Discord](https://discord.com/invite/suyCCgr) -- Live Chat  
-[Forums](https://forum.grid.space/) -- Long Form and Archival Discussion  
-[BlueSky](https://bsky.app/profile/grid.space) -- Like the Good 'Ol Days  
-[YouTube](https://www.youtube.com/c/gridspace) -- Content when I have time  
+- **Free & Open Source**: No licensing fees or subscriptions
+- **Browser-Based**: Run it locally or host it on your network
+- **Shark-Optimized**: Pre-configured for CNC Shark HD4 with proper post-processing
+- **TAP File Export**: Native support for .tap files with GRBL-compatible G-code
+- **Active Development**: Regular updates and community support
 
-# Free and Open Source
+### Features
 
-Kiri:Moto and Mesh:Tool are completely open source and free for use without restriction. Over 12 years in development, this passion project has grown well beyond its original scope. It has consumed most of my free time for many years. Please consider donating to support continued development GitHub sponsorship or PayPal.  
+- ✅ Full 2.5D and 3D toolpath generation
+- ✅ Multiple operation types (roughing, finishing, drilling, contouring)
+- ✅ Arc support (G2/G3 commands) for smoother cuts
+- ✅ Manual tool change workflow optimized for Shark HD4
+- ✅ Inch-based measurements (G20) by default
+- ✅ Visual toolpath preview
+- ✅ Support for common router bits (1/4", 1/2", 1/8" shanks)
 
-[![GitHub Sponsors](https://img.shields.io/github/sponsors/GridSpace)](https://github.com/sponsors/GridSpace)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/gridspace3d?locale.x=en_US)
+### Quick Start
 
-# Documentation
-[Documentation](https://docs.grid.space/) -- Could really use help with this  
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/JarettHall/SharkByte.git
+   cd SharkByte
+   ```
 
-Docs are build with [Docusaurus](https://docusaurus.io/) and served using [GitHub Pages](https://pages.github.com/).
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-You can build and view the docs locally with:
-```
-git clone git@github.com:GridSpace/grid-apps.git
-cd grid-apps
-npm run setup
-npm run docs-dev
-```
+3. **Run in development mode:**
+   ```bash
+   npm run dev
+   ```
 
-# HTML5 Web Apps (Installable)
+4. **Open in browser:**
+   Navigate to `http://localhost:8080`
 
-[`Grid.Space`](https://grid.space) hosts [several live versions](https://grid.space/choose) of this code
+5. **Select your machine:**
+   Go to Setup → Device → Select "CNC Shark HD4"
 
-[`Kiri:Moto`](https://grid.space/kiri) is a browser-based Slicer for 3D printers, CNC mills, and Laser cutters
+### Machine Specifications
 
-[`Mesh:Tool`](https://grid.space/mesh) is a browser-based mesh repair and editing tool
+**CNC Shark HD4:**
+- Work area: 25" × 25" × 7" (635mm × 635mm × 178mm)
+- Controller: GRBL-based with LCD pendant
+- Spindle: Up to 27,000 RPM
+- File format: .tap (G-code with arc support)
 
+### Documentation
 
-# Electron Builds (Desktop Binaries)
+- **📖 User Guide**: [SHARKBYTE_USER_GUIDE.md](SHARKBYTE_USER_GUIDE.md) - Complete usage instructions
+- **🔧 Setup Guide**: [SHARK_HD4_SETUP.md](SHARK_HD4_SETUP.md) - Machine-specific setup
+- **📋 Rebranding**: [REBRANDING_CHECKLIST.md](REBRANDING_CHECKLIST.md) - Development notes
+- **🎯 Original Docs**: [Kiri:Moto Documentation](https://docs.grid.space/kiri-moto/)
 
-https://github.com/GridSpace/grid-apps/releases/
+### Contributing
 
-Click on "Assets" under the release name to reveal files
+We welcome contributions! Whether you're fixing bugs, adding features, or improving documentation, please see our [CONTRIBUTING.md](CONTRIBUTING.md) guide.
 
-Linux x86 requires the following to run:
+### Support
 
-```
-sudo apt -y install fuse
-chmod 755 KiriMoto-linux-x86_64.AppImage
-./KiriMoto-linux-x86_64.AppImage --no-sandbox
-```
+- **Issues**: [GitHub Issues](https://github.com/JarettHall/SharkByte/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/JarettHall/SharkByte/discussions)
+- **User Guide**: [Complete SharkByte Documentation](SHARKBYTE_USER_GUIDE.md)
 
-The Windows and Mac binaries are not signed, so you will need to jump through a few safety hoops to get them to open the first time.
+### Attribution
 
+SharkByte is a fork of [Kiri:Moto](https://github.com/GridSpace/grid-apps) by Stewart Allen.
 
-# Linux / Mac Developers
+The original Kiri:Moto project is a comprehensive slicing and CAM tool supporting 3D printing, CNC milling, laser cutting, and more. We are grateful for Stewart's incredible work and the open-source foundation it provides.
 
-## Testing Locally (with Docker)
+### License
 
-```
-git clone git@github.com:GridSpace/grid-apps.git
-cd grid-apps
-npm run setup
-docker-compose -f src/dock/compose.yml up
-```
+MIT License - See [LICENSE](LICENSE) file for details
 
-## Testing Locally (with Electron)
+Original work Copyright (c) Stewart Allen <sa@grid.space>
+Fork modifications Copyright (c) 2024 Jarett Hall
 
-```
-git clone git@github.com:GridSpace/grid-apps.git
-cd grid-apps
-npm run setup
-npm run start
-```
+---
 
-## Testing Locally (with NodeJS)
+**Built with ❤️ for the CNC Shark community**
 
-```
-git clone git@github.com:GridSpace/grid-apps.git
-cd grid-apps
-npm run setup
-npm run dev
-```
-
-## TrueNAS Via YAML
-
-`Apps > Discover Apps > Install via YAML`
-
-```
-services:
-  kirimoto:
-    build:
-      context: https://github.com/GridSpace/grid-apps.git#refs/tags/latest
-      dockerfile: ./src/dock/Dockerfile
-    ports:
-      - "8080:8080"
-```
-
-## For any default install...
-
-Then open a browser to [localhost:8080/kiri](http://localhost:8080/kiri)
-
-# Windows Developers
-
-Follow the instructions in [this issue comment](https://github.com/GridSpace/grid-apps/issues/331#issuecomment-2692492302).
-
-# Javascript Slicing APIs
-
-A script include that injects a web worker into the page that will asynchronously perform any of Kiri’s slicing and gcode generation functions. And a frame messaging API for controlling Kiri:Moto inside an IFrame.
-
-* https://grid.space/kiri/engine.html
-* https://grid.space/kiri/frame.html
+*Making professional CAM accessible to everyone*

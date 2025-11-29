@@ -1,0 +1,15 @@
+{
+    "name": "SharkByte 1.0.0",
+    "short_name": "SharkByte",
+    "description": "Open-source CAM for CNC Shark routers",
+    "start_url": "/byte/",
+    "id": "/byte/",
+    "display": "standalone",
+    "theme_color": "#006994",
+    "background_color": "#f0f8ff",
+    "orientation": "landscape-primary",
+    "icons": [
+        { "src": "./logo-shark-512.png", "type": "image/png", "sizes": "512x512" },
+        { "src": "./logo-shark-144.png", "type": "image/png", "sizes": "144x144" }
+    ]
+}

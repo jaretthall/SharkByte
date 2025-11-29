@@ -1,0 +1,34 @@
+
+> sharkbyte@1.0.0 dev
+> npm run webpack-ext && gs-app-server --debug --single
+
+
+> sharkbyte@1.0.0 webpack-ext
+> npm run webpack-three && npm run webpack-zip
+
+
+> sharkbyte@1.0.0 webpack-three
+> npx webpack --config bin/webpack-three-esm.js
+
+asset three.js 2.22 MiB [compared for emit] [javascript module] [big] (name: main)
+orphan modules 2.21 MiB [orphan] 10 modules
+runtime modules 670 bytes 3 modules
+./bin/webpack-three-bundle.js + 10 modules 2.22 MiB [built] [code generated]
+webpack 5.102.1 compiled successfully in 1649 ms
+
+> sharkbyte@1.0.0 webpack-zip
+> npx webpack --config bin/webpack-jszip-esm.js
+
+asset jszip-esm.js 369 KiB [compared for emit] [javascript module] (name: main)
+runtime modules 884 bytes 4 modules
+cacheable modules 366 KiB
+  ./bin/webpack-jszip-bundle.js 115 bytes [built] [code generated]
+  ./node_modules/jszip/dist/jszip.js 365 KiB [built] [code generated]
+webpack 5.102.1 compiled successfully in 480 ms
+251027.211703 [32m'[appserver]'[39m [32m'serving single app on "."'[39m
+{
+  cwd: '/mnt/c/Users/JarettHall/Programming/SharkByte',
+  env: { _: [], debug: true, single: true }
+}
+251027.211704 [32m'[appserver]'[39m [32m'initialized . from .'[39m
+251027.211704 [32m'[appserver]'[39m [32m'app-server running: ports=[8080] apps=[.] data=[data] logs=[logs]'[39m

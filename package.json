@@ -1,35 +1,28 @@
 {
-    "name": "grid-apps",
-    "version": "4.3.4",
-    "description": "grid.space 3d slicing & modeling tools",
-    "author": "Stewart Allen <sa@grid.space>",
+    "name": "sharkbyte",
+    "version": "1.0.0",
+    "description": "Open-source CAM for CNC Shark routers - Forked from Kiri:Moto",
+    "author": "Jarett Hall (Original: Stewart Allen <sa@grid.space>)",
     "license": "MIT",
     "private": false,
     "repository": {
         "type": "git",
-        "url": "https://github.com/gridspace/apps.git"
+        "url": "https://github.com/JarettHall/SharkByte.git"
     },
     "keywords": [
-        "grid.space",
-        "mesh:tool",
-        "kiri:moto",
-        "kirimoto",
-        "kiri",
-        "mesh",
-        "editor",
-        "3D",
-        "FDM",
-        "CAM",
-        "CNC",
-        "mSLA",
-        "laser",
-        "waterjet",
-        "wire edm",
-        "wire-edm",
-        "dragknife",
-        "drag knife",
+        "sharkbyte",
+        "cnc-shark",
+        "shark-hd4",
+        "cam",
+        "cnc",
         "gcode",
-        "slicer"
+        "tap-files",
+        "router",
+        "milling",
+        "toolpath",
+        "vcarve-alternative",
+        "open-source-cam",
+        "kiri-moto-fork"
     ],
     "engines": {
         "node": ">=22.0.0"
@@ -58,6 +51,7 @@
         "prettier": "^3.5.3",
         "react-responsive-carousel": "^3.2.23",
         "serve-static": "^1.14.1",
+        "sharp": "^0.34.4",
         "three": "^0.178.0",
         "three-mesh-bvh": "^0.7.6",
         "uglify-js": "3.14.5",
@@ -119,9 +113,9 @@
     "main": "app-el.js",
     "build": {
         "npmRebuild": false,
-        "appId": "space.grid.kiri",
-        "productName": "KiriMoto",
-        "artifactName": "KiriMoto-${os}-${arch}.${ext}",
+        "appId": "io.sharkbyte.cam",
+        "productName": "SharkByte",
+        "artifactName": "SharkByte-${os}-${arch}.${ext}",
         "files": [
             {
                 "from": "tmp/src",

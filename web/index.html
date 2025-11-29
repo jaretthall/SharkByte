@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jarett Hall (Original: Stewart Allen)">
+    <meta name="description" content="SharkByte - Open-source CAM for CNC Shark routers">
+    <meta property="og:title" content="SharkByte - CAM for CNC Shark Routers">
+    <meta property="og:description" content="Open-source CAM suite optimized for CNC Shark HD4 routers">
+    <meta property="og:url" content="https://sharkbyte.io/">
+    <title>SharkByte - CAM for CNC Shark</title>
+    <link rel="icon" href="/byte/favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #006994 0%, #00A8CC 50%, #00D4FF 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo img {
+            max-width: 150px;
+            max-height: 150px;
+            object-fit: contain;
+        }
+
+        .logo-placeholder {
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .apps-grid {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: nowrap;
+        }
+
+        .app-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            flex: 0 1 280px;
+            min-width: 250px;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .app-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .app-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .app-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        .attribution {
+            position: fixed;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            opacity: 0.7;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+
+        .attribution a:hover {
+            color: white;
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .logo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .apps-grid {
+                flex-wrap: wrap;
+            }
+
+            .app-card {
+                flex: 0 1 calc(50% - 1rem);
+                min-width: 220px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .apps-grid {
+                flex-direction: column;
+            }
+
+            .app-card {
+                flex: 1 1 auto;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <!-- Logo will be added here -->
+            <div class="logo-placeholder">🦈</div>
+        </div>
+
+        <h1>SharkByte</h1>
+        <p class="tagline">Open-source CAM for CNC Shark routers</p>
+
+        <div class="apps-grid">
+            <a href="/byte/" class="app-card" id="sharkbyte">
+                <span class="app-icon">⚙️</span>
+                <div class="app-title">SharkByte</div>
+                <div class="app-description">
+                    Full-featured CAM for CNC Shark HD4 routers.
+                    Generate toolpaths, preview cuts, and export .tap files.
+                </div>
+            </a>
+
+            <a href="/mesh/" class="app-card" id="openwater">
+                <span class="app-icon">🌊</span>
+                <div class="app-title">Open Water</div>
+                <div class="app-description">
+                    3D mesh editor for preparing models.
+                    Heal meshes, split objects, and optimize for machining.
+                </div>
+            </a>
+
+            <a href="/fin/" class="app-card" id="fin">
+                <span class="app-icon">🔧</span>
+                <div class="app-title">Fin</div>
+                <div class="app-description">
+                    Development and diagnostic environment.
+                    Advanced tools for debugging and system configuration.
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="attribution">
+        <p>Built with ❤️ for the CNC Shark community</p>
+        <p>Forked from <a href="https://github.com/GridSpace/grid-apps" target="_blank">Kiri:Moto</a> by Stewart Allen</p>
+    </div>
+
+    <script>
+        // Add some subtle animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.app-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+
+            // Try to load the actual logo
+            const logoPlaceholder = document.querySelector('.logo-placeholder');
+            const logoContainer = document.querySelector('.logo');
+
+            // Check if logo file exists
+            const img = new Image();
+            img.onload = function() {
+                logoPlaceholder.style.display = 'none';
+                const logoImg = document.createElement('img');
+                logoImg.src = '/byte/logo-loading.png';
+                logoImg.alt = 'SharkByte Logo';
+                logoContainer.appendChild(logoImg);
+            };
+            img.onerror = function() {
+                // Keep the emoji placeholder if logo doesn't load
+                console.log('Logo not found, using emoji placeholder');
+            };
+            img.src = '/byte/logo-loading.png';
+        });
+    </script>
+</body>
+</html>

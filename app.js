@@ -124,11 +124,11 @@ function init(mod) {
     mod.add(serveWasm);
     mod.add(serveCode);
     mod.add(fullpath({
-        "/boot"            : redir((pre??"") + "/boot/", 301),
-        "/kiri"            : redir((pre??"") + "/kiri/", 301),
+        "/fin"             : redir((pre??"") + "/fin/", 301),
+        "/byte"            : redir((pre??"") + "/byte/", 301),
         "/mesh"            : redir((pre??"") + "/mesh/", 301),
         "/meta"            : redir((pre??"") + "/meta/", 301),
-        "/kiri/index.html" : redir((pre??"") + "/kiri/", 301),
+        "/byte/index.html" : redir((pre??"") + "/byte/", 301),
         "/mesh/index.html" : redir((pre??"") + "/mesh/", 301),
         "/meta/index.html" : redir((pre??"") + "/meta/", 301)
     }));
@@ -149,8 +149,9 @@ function init(mod) {
     mod.static("/fon2/", "web/fon2");
     mod.static("/mesh/", "web/mesh");
     mod.static("/moto/", "web/moto");
-    mod.static("/kiri/", "web/kiri");
-    mod.static("/boot/", "web/boot");
+    mod.static("/byte/", "web/byte");
+    mod.static("/fin/", "web/fin");
+    mod.static("/", "web");
 
     // module loader
     function load_modules(root, force) {
@@ -352,7 +353,7 @@ const productionMap = {
 };
 
 const redirList = [
-    "/kiri/",
+    "/byte/",
     "/mesh/"
 ];
 
@@ -576,7 +577,7 @@ function cookieValue(cookie,key) {
 
 function rewriteHtmlVersion(req, res, next) {
     if ([
-        "/kiri/",
+        "/byte/",
         "/mesh/",
         "/lib/mesh/work.js",
         "/lib/kiri/run/worker.js",

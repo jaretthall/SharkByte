@@ -1,0 +1,43 @@
+{
+    "file-ext": "tap",
+    "token-space": " ",
+    "strip-comments": false,
+    "pre": [
+        "G20 ; set units to INCHES (Shark HD4 default)",
+        "G90 ; absolute position mode (required)",
+        "G17 ; XY plane selection for arcs",
+        "G94 ; set feed rate to inches per minute",
+        "G0 F100 ; default rapid feed rate 100 IPM"
+    ],
+    "post": [
+        "G0 Z0.5 ; raise Z to safe height (0.5 inches)",
+        "M5 ; spindle off",
+        "G0 X0 Y0 ; return to origin",
+        "M30 ; program end"
+    ],
+    "tool-change": [
+        "; Manual tool change to '{tool_name}'",
+        "M0 ; pause for manual tool change",
+        "G0 Z0.5 ; move to safe Z for tool change",
+        "; T{tool} - Insert tool {tool} ({tool_name}) then resume"
+    ],
+    "dwell": [
+        "G4 P{time} ; dwell for {time} seconds"
+    ],
+    "spindle": [
+        "M3 S{speed} ; spindle on at {speed} RPM"
+    ],
+    "settings": {
+        "origin_center": false,
+        "bed_width": 635,
+        "bed_depth": 635,
+        "build_height": 178,
+        "spindle_max": 27000,
+        "arc_enabled": true,
+        "arc_tolerance": 0.005,
+        "image_url": "/decal/shark-hd4.png",
+        "image_scale": 150,
+        "image_anchor": 5
+    }
+}
+
